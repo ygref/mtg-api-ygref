@@ -40,6 +40,12 @@ export function Content() {
                 Power and Toughness: {result.power}/{result.toughness}
               </p>
               <p>Loyalty: {result.loyalty}</p>
+              <p>Sets: {result.set_name}</p>
+              <p>Price USD: {result.prices.usd}</p>
+
+              <p>
+                <a href={result.purchase_uris.tcgplayer}>TCGPlayer: </a>{" "}
+              </p>
             </div>
           ))}
         </div>
