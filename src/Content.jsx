@@ -43,7 +43,7 @@ export function Content() {
                         Power and Toughness: {card_faces.power}/{card_faces.toughness}
                       </p>
                       <p>Loyalty: {card_faces.loyalty}</p>
-                      <p>Sets: {card_faces.set_name}</p>
+                      <p>Sets: {card_faces.set_name || result.set_name || "N/A"}</p>
                       <p>
                         Price USD:{" "}
                         {card_faces.prices && card_faces.prices.usd
@@ -69,7 +69,7 @@ export function Content() {
                   <p>Sets: {result.set_name}</p>
                   <p>Price USD: {result.prices.usd}</p>
                   <p>
-                    <a href={result.purchase_uris.tcgplayer}>Purchase on TCGPlayer</a>{" "}
+                    <a href={result.purchase_uris}>Purchase on TCGPlayer</a>{" "}
                   </p>
                 </div>
               )}
